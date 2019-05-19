@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efx:project name="Reindeer_Trion" description="PulseRain Reindeer RISC-V Soft CPU for Efinix Trion T20 BGA256 Development Kit" last_change_date="Sun May 19 2019 01:41:23" location="C:/GitHub/Reindeer_Trion/build" sw_version="2019.1.95" last_run_state="pass" last_run_tool="efx_pgm" last_run_flow="bitstream" config_result_in_sync="true" design_ood="sync" place_ood="sync" route_ood="sync" xmlns:efx="http://www.efinixinc.com/enf_proj" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/enf_proj enf_proj.xsd">
+    <efx:device_info>
+        <efx:family name="Trion"/>
+        <efx:device name="T20F256"/>
+        <efx:timing_model name="C4"/>
+    </efx:device_info>
+    <efx:design_info def_veri_version="verilog_2k" def_vhdl_version="vhdl_2008">
+        <efx:top_module name="Reindeer_Trion_T20_Dev_Kit"/>
+        <efx:design_file name="../source/T20_Dev_Kit/Reindeer_Trion_T20_Dev_Kit.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/debug_coprocessor.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/debug_UART.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/Serial_RS232.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/debug_reply.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/CRC16_CCITT.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/HW_Loader/source/debug_coprocessor_wrapper.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/memory/mem_controller.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/memory/efinix/trion/dual_port_ram.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/memory/efinix/trion/single_port_ram.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/memory/efinix/trion/single_port_ram_8bit.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/peripherals/peripherals.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/peripherals/UART/UART_TX.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/source/PulseRain_Reindeer_MCU.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/PulseRain_Reindeer_core.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_mm_reg.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_machine_timer.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_instruction_decode.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_reg_file.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_execution_unit.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_memory.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_fetch_instruction.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_controller.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_CSR.v" version="verilog_2k"/>
+        <efx:design_file name="../submodules/PulseRain_MCU/submodules/PulseRain_processor_core/source/Reindeer_data_access.v" version="verilog_2k"/>
+        <efx:top_vhdl_arch name=""/>
+    </efx:design_info>
+    <efx:constraint_info>
+        <efx:sdc_file name="constraints/Reindeer_Trion.sdc"/>
+        <efx:inter_file name=""/>
+    </efx:constraint_info>
+    <efx:sim_info/>
+    <efx:misc_info/>
+    <efx:synthesis tool_name="efx_map">
+        <efx:param name="work_dir" value="work_syn" value_type="e_string"/>
+        <efx:param name="write_efx_verilog" value="on" value_type="e_bool"/>
+        <efx:param name="opt_mode" value="speed" value_type="e_option"/>
+        <efx:param name="include" value="C:/arc/repo/Reindeer_Trion/submodules/HW_Loader/source" value_type="e_string"/>
+        <efx:param name="include" value="C:/arc/repo/Reindeer_Trion/submodules/PulseRain_MCU/common" value_type="e_string"/>
+        <efx:param name="include" value="C:/arc/repo/Reindeer_Trion/submodules/PulseRain_MCU/common/efinix" value_type="e_string"/>
+    </efx:synthesis>
+    <efx:place_and_route tool_name="efx_pnr">
+        <efx:param name="work_dir" value="work_pnr" value_type="e_string"/>
+        <efx:param name="verbose" value="off" value_type="e_bool"/>
+        <efx:param name="load_delaym" value="on" value_type="e_bool"/>
+    </efx:place_and_route>
+    <efx:bitstream_generation tool_name="efx_pgm">
+        <efx:param name="mode" value="active" value_type="e_option"/>
+        <efx:param name="width" value="1" value_type="e_option"/>
+        <efx:param name="cold_boot" value="off" value_type="e_bool"/>
+        <efx:param name="cascade" value="off" value_type="e_option"/>
+        <efx:param name="enable_roms" value="on" value_type="e_option"/>
+        <efx:param name="spi_low_power_mode" value="on" value_type="e_bool"/>
+        <efx:param name="io_weak_pullup" value="on" value_type="e_bool"/>
+        <efx:param name="oscillator_clock_divider" value="DIV8" value_type="e_option"/>
+        <efx:param name="enable_crc_check" value="on" value_type="e_bool"/>
+    </efx:bitstream_generation>
+</efx:project>

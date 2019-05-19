@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efxpt:design_db name="Reindeer_Trion" device_def="T20F256" location="C:\GitHub\Reindeer_Trion\build" version="2019.1.95" last_change_date="Sun May 19 01:39:22 2019" xmlns:efxpt="http://www.efinixinc.com/peri_design_db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_design_db peri_design_db.xsd ">
+    <efxpt:device_info>
+        <efxpt:iobank_info>
+            <efxpt:iobank name="1A" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="1B_1C" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="1D_1E" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="3A_3B_3C" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="3D_3E" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="4A" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="4B" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="BR_CORNER" iostd="1.2 V"/>
+            <efxpt:iobank name="TL_CORNER" iostd="1.2 V"/>
+            <efxpt:iobank name="TR_CORNER" iostd="1.2 V"/>
+        </efxpt:iobank_info>
+        <efxpt:ctrl_info>
+            <efxpt:ctrl name="cfg" ctrl_def="CONFIG_CTRL0" clock_name="" cbsel_bus_name="cfg_CBSEL" config_ctrl_name="cfg_CONFIG" ena_capture_name="cfg_ENA" error_status_name="cfg_ERROR" um_signal_status_name="cfg_USR_STATUS" is_remote_update_enable="false" is_user_mode_enable="false"/>
+        </efxpt:ctrl_info>
+    </efxpt:device_info>
+    <efxpt:gpio_info device_def="T20F256">
+        <efxpt:gpio name="RXD" gpio_def="GPIOL_47" mode="input" bus_name="" is_lvds_gpio="false">
+            <efxpt:input_config name="RXD" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="TXD" gpio_def="GPIOL_49" mode="output" bus_name="" is_lvds_gpio="false">
+            <efxpt:output_config name="TXD" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[0]" gpio_def="GPIOR_104" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[0]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[1]" gpio_def="GPIOR_105" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[1]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[2]" gpio_def="GPIOR_117" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[2]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[3]" gpio_def="GPIOR_118" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[3]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[4]" gpio_def="GPIOR_153" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[4]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[5]" gpio_def="GPIOR_154" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[5]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[6]" gpio_def="GPIOR_155" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[6]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[7]" gpio_def="GPIOR_156" mode="output" bus_name="led" is_lvds_gpio="false">
+            <efxpt:output_config name="led[7]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" drive_strength="1" is_slew_rate="false" tied_option="none" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="pll_ref_in" gpio_def="GPIOL_75" mode="input" bus_name="" is_lvds_gpio="false">
+            <efxpt:input_config name="pll_ref_in" name_ddio_lo="" conn_type="alternate" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="rst_button" gpio_def="GPIOL_02" mode="input" bus_name="" is_lvds_gpio="false">
+            <efxpt:input_config name="rst_button" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:global_unused_config state="input with weak pullup"/>
+        <efxpt:bus name="led" mode="output"/>
+    </efxpt:gpio_info>
+    <efxpt:pll_info>
+        <efxpt:pll name="pll" pll_def="PLL_TL0" ref_clock_name="" ref_clock_freq="74.25" multiplier="4" pre_divider="6" post_divider="8" reset_name="pll_reset_n" locked_name="pll_locked" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:output_clock name="pll_clk" number="0" out_divider="2" adv_out_phase_shift="0"/>
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="3" clksel_name="" feedback_clock_name="pll_clk" feedback_mode="local"/>
+        </efxpt:pll>
+    </efxpt:pll_info>
+    <efxpt:lvds_info/>
+    <efxpt:jtag_info/>
+</efxpt:design_db>
