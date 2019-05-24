@@ -66,7 +66,7 @@ module Reindeer_Trion_T20_Dev_Kit (
         wire                                        uart_tx_ocd;
         wire                                        uart_tx_cpu;
         
-        reg     [1 : 0]                             init_start = 0;
+        reg     [3 : 0]                             init_start = 0;
         reg                                         actual_cpu_start;
         reg     [`XLEN - 1 : 0]                     actual_start_addr;
 
@@ -113,8 +113,8 @@ module Reindeer_Trion_T20_Dev_Kit (
                 actual_cpu_start <= 0;
                 actual_start_addr <= 0;
             end else begin
-                init_start <= {init_start [0 : 0], 1'b1};
-                actual_cpu_start <= cpu_start | ((~init_start [1]) & init_start [0]);
+                init_start <= {init_start [2 : 0], 1'b1};
+                actual_cpu_start <= cpu_start | ((~init_start [3]) & init_start [2]);
                 if (cpu_start) begin
                     actual_start_addr <= cpu_start_addr;
                 end else if (!init_start [1]) begin
@@ -138,7 +138,7 @@ module Reindeer_Trion_T20_Dev_Kit (
             .ocd_mem_word_out (ocd_mem_word_out),        
         
             .ocd_reg_read_addr (5'd2),
-            .ocd_reg_we (cpu_start),
+            .ocd_reg_we (cpu_start | ((~init_start [3]) & init_start [2])),
             .ocd_reg_write_addr (5'd2),
             .ocd_reg_write_data (`DEFAULT_STACK_ADDR),
         
