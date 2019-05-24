@@ -28,7 +28,7 @@
 //  memory size 
 //----------------------------------------------------------------------------
 
-`define SRAM_SIZE_IN_BYTES   (48 * 1024)
+`define SRAM_SIZE_IN_BYTES   (64 * 1024)
 `define DRAM_SIZE_IN_BYTES   (8 * 1024 * 1024)
 `define DRAM_RW_BUFFER_SIZE  (1024/4)
 
