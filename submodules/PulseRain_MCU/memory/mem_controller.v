@@ -79,7 +79,7 @@ module mem_controller #(parameter sim = 0) (
         
         generate
             if (sim == 0) begin
-                single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
+               /* single_port_ram #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
                     .addr (mem_addr [`SRAM_ADDR_BITS - 1 : 0]),
                     .din (mem_write_data [31 : 16]),
                     .write_en (mem_write_en[3 : 2]),
@@ -92,7 +92,41 @@ module mem_controller #(parameter sim = 0) (
                     .write_en (mem_write_en[1 : 0]),
                     .clk (clk),
                     .dout (dout_low));
+                 */   
+                    
+                 single_port_ram_8bit_0 #(.ADDR_WIDTH (`SRAM_ADDR_BITS)) ram_8bit0 (
+                    .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
+                    .din (mem_write_data [7 : 0]),
+                    .write_en (mem_write_en[0]),
+                    .clk (clk),
+                    .dout (dout_low [7 : 0]));
+                    
+                 single_port_ram_8bit_1 #(.ADDR_WIDTH (`SRAM_ADDR_BITS)) ram_8bit1 (
+                    .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
+                    .din (mem_write_data [15 : 8]),
+                    .write_en (mem_write_en[1]),
+                    .clk (clk),
+                    .dout (dout_low [15 : 8]));
+                    
+                 single_port_ram_8bit_2 #(.ADDR_WIDTH (`SRAM_ADDR_BITS)) ram_8bit2 (
+                    .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
+                    .din (mem_write_data [23 : 16]),
+                    .write_en (mem_write_en[2]),
+                    .clk (clk),
+                    .dout (dout_high [7 : 0]));
+                    
+                 single_port_ram_8bit_3 #(.ADDR_WIDTH (`SRAM_ADDR_BITS)) ram_8bit3 (
+                    .addr (mem_addr[`SRAM_ADDR_BITS - 1 : 0]),
+                    .din (mem_write_data [31 : 24]),
+                    .write_en (mem_write_en[3]),
+                    .clk (clk),
+                    .dout (dout_high [15 : 8]));
+                    
             end else begin
+            
+                
+            
+            
             
 
                 single_port_ram_sim_high #(.ADDR_WIDTH (`SRAM_ADDR_BITS), .DATA_WIDTH (16) ) ram_high_i (
